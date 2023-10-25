@@ -1,7 +1,7 @@
 export const infoTabsPlanets = [
-	{ label: 'OVERVIEW' },
-	{ label: 'Internal Structure' },
-	{ label: 'Surface Geology' }
+	{ index: 'OVERVIEW', label: 'OVERVIEW' },
+	{ index: 'Internal', label: 'Internal Structure' },
+	{ index: 'Surface', label: 'Surface Geology' }
 ];
 
 export const titleCardPlanets = [
@@ -10,18 +10,25 @@ export const titleCardPlanets = [
 	'RADIUS',
 	'AVERAGE TEMP.'
 ];
-export const planetData = [
+export const homeData = [
 	{
 		path: '/',
 		title: 'Planet Data',
 		img: 'images/pizzaplanet.jpg',
-		text: '¡Hola! Los planetas del sistema solar son fascinantes. Hay ocho planetas en total, divididos en dos grupos: los planetas rocosos y los gigantes gaseosos. Los planetas rocosos son Mercurio, Venus, La Tierra y Marte. Son los más cercanos al Sol y tienen superficies sólidas. Los gigantes gaseosos son Júpiter, Saturno, Urano y Neptuno. Están más lejos del Sol y tienen atmósferas compuestas principalmente de hidrógeno y helio.',
-		color: '#419EBB'
-	},
+		text: '¡Hola! Los planetas del sistema solar son fascinantes. Hay ocho planetas en total, divididos en dos grupos: los planetas rocosos y los gigantes gaseosos. Los planetas rocosos son Mercurio, Venus, La Tierra y Marte. Son los más cercanos al Sol y tienen superficies sólidas. Los gigantes gaseosos son Júpiter, Saturno, Urano y Neptuno. Están más lejos del Sol y tienen atmósferas compuestas principalmente de hidrógeno y helio.'
+	}
+];
+export const planetData = [
 	{
 		path: '/mercury',
 		title: 'MERCURY',
-		img: 'images/planet-mercury.svg',
+		img: [
+			{
+				OVERVIEW: 'images/planet-mercury.svg',
+				Internal: 'images/planet-mercury-internal.svg',
+				Surface: 'images/geology-mercury.png'
+			}
+		],
 		text: 'Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planets density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earths density.',
 		color: '#419EBB',
 		units: [
@@ -34,7 +41,13 @@ export const planetData = [
 	{
 		path: '/venus',
 		title: 'VENUS',
-		img: 'images/planet-venus.svg',
+		img: [
+			{
+				OVERVIEW: 'images/planet-venus.svg',
+				Internal: 'images/planet-venus-internal.svg',
+				Surface: 'images/geology-venus.png'
+			}
+		],
 		text: 'The similarity in size and density between Venus and Earth suggests they share a similar internal structure: a core, mantle, and crust. Like that of Earth, Venusian core is most likely at least partially liquid because the two planets have been cooling at about the same rate.',
 		color: '#EDA249',
 		units: [
@@ -47,7 +60,13 @@ export const planetData = [
 	{
 		path: '/earth',
 		title: 'EARTH',
-		img: 'images/planet-earth.svg',
+		img: [
+			{
+				OVERVIEW: 'images/planet-earth.svg',
+				Internal: 'images/planet-earth-internal.svg',
+				Surface: 'images/geology-earth.png'
+			}
+		],
 		text: 'Earths interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle.',
 		color: '#6D2ED5',
 		units: [
@@ -60,7 +79,13 @@ export const planetData = [
 	{
 		path: '/mars',
 		title: 'MARS',
-		img: 'images/planet-mars.svg',
+		img: [
+			{
+				OVERVIEW: 'images/planet-mars.svg',
+				Internal: 'images/planet-mars-internal.svg',
+				Surface: 'images/geology-mars.png'
+			}
+		],
 		text: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the Red Planet',
 		color: '#D14C32',
 		units: [
@@ -73,7 +98,13 @@ export const planetData = [
 	{
 		path: '/jupiter',
 		title: 'JUPITER',
-		img: 'images/planet-jupiter.svg',
+		img: [
+			{
+				OVERVIEW: 'images/planet-jupiter.svg',
+				Internal: 'images/planet-jupiter-internal.svg',
+				Surface: 'images/geology-jupiter.png'
+			}
+		],
 		text: "'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass two and a half times that of all the other planets in the Solar System combined, but less than one-thousandth the mass of the Sun.",
 		color: '#D83A34',
 		units: [
@@ -86,7 +117,13 @@ export const planetData = [
 	{
 		path: '/saturn',
 		title: 'SATURN',
-		img: 'images/planet-saturn.svg',
+		img: [
+			{
+				OVERVIEW: 'images/planet-saturn.svg',
+				Internal: 'images/planet-saturn-internal.svg',
+				Surface: 'images/geology-saturn.png'
+			}
+		],
 		text: 'Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It only has one-eighth the average density of Earth.',
 		color: '#CD5120',
 		units: [
@@ -99,7 +136,13 @@ export const planetData = [
 	{
 		path: '/uranus',
 		title: 'URANUS',
-		img: 'images/planet-uranus.svg',
+		img: [
+			{
+				OVERVIEW: 'images/planet-uranus.svg',
+				Internal: 'images/planet-uranus-internal.svg',
+				Surface: 'images/geology-uranus.png'
+			}
+		],
 		text: 'Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus according to Greek mythology, was the great-grandfather of Ares. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.',
 		color: '#1EC1A2',
 		units: [
@@ -112,7 +155,13 @@ export const planetData = [
 	{
 		path: '/neptune',
 		title: 'NEPTUNE',
-		img: 'images/planet-neptune.svg',
+		img: [
+			{
+				OVERVIEW: 'images/planet-neptune.svg',
+				Internal: 'images/planet-neptune-internal.svg',
+				Surface: 'images/geology-mercury.png'
+			}
+		],
 		text: 'Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, more massive than its near-twin Uranus.',
 		color: '#2D68F0',
 		units: [

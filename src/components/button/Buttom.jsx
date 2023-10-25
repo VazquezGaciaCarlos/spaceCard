@@ -1,6 +1,9 @@
 import { StyledButton } from './styles';
 
-const Button = ({ label, action, color, disebled }) => {
-	return <StyledButton onClick={() => { action(label) }} color={(disebled) ? color : 'black'} disabled={disebled}>{label}</StyledButton>;
+const Button = ({ tab, planet, activeTab, action }) => {
+	const { color, img } = planet
+	const { label } = tab
+
+	return <StyledButton onClick={() => { action(tab, img) }} color={(activeTab) ? color : 'black'} disabled={(activeTab)}>{label}</StyledButton>;
 };
 export default Button;
