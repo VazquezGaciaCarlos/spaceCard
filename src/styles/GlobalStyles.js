@@ -28,11 +28,4 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: 0;
     padding-left: 0;
   }
-
-  /* .padre{
-    margin-top: 25vh;
-    margin-left: 15vh;
-    background-color:blue;
-  } */
 `;
-
